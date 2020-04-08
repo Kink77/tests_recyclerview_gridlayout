@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="recyclerview_left_padding">16</integer>
+    <integer name="recyclerview_right_padding">16</integer>
+    <integer name="recyclerview_top_padding">0</integer>
+    <integer name="recyclerview_bottom_padding">0</integer>
+    <integer name="gridlayout_columns">4</integer>
+    <integer name="gridlayout_vertical_gutter">4</integer>
+    <integer name="gridlayout_horizontal_gutter">12</integer>
+</resources>
