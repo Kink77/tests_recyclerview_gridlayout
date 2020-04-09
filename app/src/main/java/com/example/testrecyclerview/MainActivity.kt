@@ -58,37 +58,38 @@ class MainActivity : AppCompatActivity() {
         return resources.getInteger(R.integer.gridlayout_columns)
     }
 
-    private fun getHorizontalGutterPxForGridLayout(): Int {
-        return resources.getInteger(R.integer.gridlayout_horizontal_gutter).fromDPToPixel()
+    private fun getHorizontalGutterForGridLayout(): Int {
+        return resources.getDimensionPixelSize(R.dimen.gridlayout_horizontal_gutter)
     }
 
-    private fun getVerticalGutterPxForGridLayout(): Int {
-        return resources.getInteger(R.integer.gridlayout_vertical_gutter).fromDPToPixel()
+    private fun getVerticalGutterForGridLayout(): Int {
+        return resources.getDimensionPixelSize(R.dimen.gridlayout_vertical_gutter)
     }
 
-    private fun getRecyclerViewPaddingPx(): Rect {
+    private fun getRecyclerViewPadding(): Rect {
         return Rect(
-            resources.getInteger(R.integer.recyclerview_left_padding).fromDPToPixel(),
-            resources.getInteger(R.integer.recyclerview_top_padding).fromDPToPixel(),
-            resources.getInteger(R.integer.recyclerview_right_padding).fromDPToPixel(),
-            resources.getInteger(R.integer.recyclerview_bottom_padding).fromDPToPixel()
+            resources.getDimensionPixelSize(R.dimen.recyclerview_left_padding),
+            resources.getDimensionPixelSize(R.dimen.recyclerview_top_padding),
+            resources.getDimensionPixelSize(R.dimen.recyclerview_right_padding),
+            resources.getDimensionPixelSize(R.dimen.recyclerview_bottom_padding)
         )
     }
 
     private fun updateRecyclerViewPadding() {
-        val padding = getRecyclerViewPaddingPx()
+        val padding = getRecyclerViewPadding()
         recycler_view.setPadding(padding.left, padding.top, padding.right, padding.bottom)
     }
 
     private fun updateGridLayoutItemDecoration() {
-        val horizontalGutter = getHorizontalGutterPxForGridLayout()
+        val horizontalGutter = getHorizontalGutterForGridLayout()
         if (horizontalGutter != gridLayoutItemDecoration.horizontalGutter) {
             gridLayoutItemDecoration.horizontalGutter = horizontalGutter
         }
-        val verticalGutter = getVerticalGutterPxForGridLayout()
+        val verticalGutter = getVerticalGutterForGridLayout()
         if (verticalGutter != gridLayoutItemDecoration.verticalGutter) {
             gridLayoutItemDecoration.verticalGutter = verticalGutter
         }
+
     }
 
     private fun updateGridLayoutSpanCount() {

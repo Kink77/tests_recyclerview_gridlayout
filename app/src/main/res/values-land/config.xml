@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <integer name="recyclerview_left_padding">32</integer>
-    <integer name="recyclerview_right_padding">32</integer>
-    <integer name="recyclerview_top_padding">0</integer>
-    <integer name="recyclerview_bottom_padding">0</integer>
+    <dimen name="recyclerview_left_padding">32dp</dimen>
+    <dimen name="recyclerview_right_padding">32dp</dimen>
+    <dimen name="recyclerview_top_padding">0dp</dimen>
+    <dimen name="recyclerview_bottom_padding">0dp</dimen>
     <integer name="gridlayout_columns">6</integer>
-    <integer name="gridlayout_vertical_gutter">8</integer>
-    <integer name="gridlayout_horizontal_gutter">24</integer>
+    <dimen name="gridlayout_vertical_gutter">8dp</dimen>
+    <dimen name="gridlayout_horizontal_gutter">24dp</dimen>
 
 </resources>
